@@ -1,4 +1,4 @@
-Variables
+# Variables
 
 a variable is a container for a value. You can think of variables as little containers for information that live in a computer’s memory. Information stored in variables, such as a username, account number, or even personalized greeting can then be found in memory.
 
@@ -127,3 +127,16 @@ console.log(typeof newVariable);
 ans:
 string
 number
+
+# PROJECT- Kelvin Weather
+
+//constant variable is 293
+const kelvin = 0
+//var celcius is less than 273
+const celcius = kelvin-273
+console.log(celcius)
+let fahrenheit =celcius \* (9/5) +32
+console.log(fahrenheit)
+console.log(Math.floor(fahrenheit));
+//round down
+console.log(`The temperature is ${fahrenheit} degrees Fahrenheit.`)
