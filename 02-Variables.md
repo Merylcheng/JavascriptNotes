@@ -140,3 +140,22 @@ console.log(fahrenheit)
 console.log(Math.floor(fahrenheit));
 //round down
 console.log(`The temperature is ${fahrenheit} degrees Fahrenheit.`)
+
+# PROJECT- Dog Years
+
+const myAge = 31
+//my current age
+let earlyYears = 2
+earlyYears \*= 10.5
+console.log(earlyYears)
+
+let laterYears = myAge -2
+laterYears \*= 4
+console.log(laterYears)
+
+const myAgeInDogYears = earlyYears + laterYears
+console.log (myAgeInDogYears)
+
+const myName = 'Meryl'
+console.log(myName.toLowerCase())
+console.log(`My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years.`)
