@@ -88,6 +88,8 @@ ans:
 
 ## String Concatenation with Variables
 
+when you join strings together
+
 In previous exercises, we assigned strings to variables. Now, let’s go over how to connect, or concatenate, strings in variables.
 
 The + operator can be used to combine two string values even if those values are being stored in variables:
