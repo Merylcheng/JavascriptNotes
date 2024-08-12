@@ -254,3 +254,41 @@ console.log('predict')
 let eightBall = 'BINGO'
 
 # FUNCTIONS
+
+A function declaration consists of:
+
+The function keyword.
+greetWorld -The name of the function, or its identifier, followed by parentheses.
+console.log('Hello, World!');
+}- A function body, or the block of statements required to perform a specific task, enclosed in the function’s curly brackets, { }.
+
+function greetWorld() {
+console.log('Hello, World!');
+}
+
+greetWorld(); // Output: Hello, World!
+This function call executes the function body, or all of the statements between the curly braces in the function declaration.
+
+## Parameters and Arguments
+
+So far, the functions we’ve created execute a task without an input. However, some functions can take inputs and use the inputs to perform a task. When declaring a function, we can specify its parameters. Parameters allow functions to accept input(s) and perform a task using the input(s). We use parameters as placeholders for information that will be passed to the function when it is called.
+
+function calculateArea(width, height) {
+console.log(width \* height);
+}
+
+In the diagram above, calculateArea(), computes the area of a rectangle, based on two inputs, width and height.
+
+The parameters are specified between the parenthesis as width and height, and inside the function body, they act just like regular variables. width and height act as placeholders for values that will be multiplied together.
+
+When calling a function that has parameters, we specify the values in the parentheses that follow the function name. The values that are passed to the function when it is called are called arguments. Arguments can be passed to the function as values or variables.
+
+calculateArea(10, 6);
+In the function call above, the number 10 is passed as the width and 6 is passed as height. Notice that the order in which arguments are passed and assigned follows the order that the parameters are declared.
+
+const rectWidth = 10
+const rectHeight = 6
+
+calculateArea(rectWidth, rectHeight)
+
+The variables rectWidth and rectHeight are initialized with the values for the height and width of a rectangle before being used in the function call.
