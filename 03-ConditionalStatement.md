@@ -134,3 +134,123 @@ Essentially, the ! operator will either take a true value and pass back false, o
 non-boolean data types, like strings or numbers, are evaluated when checked inside a condition.
 
 Sometimes, you’ll want to check if a variable exists and you won’t necessarily want it to equal a specific value — you’ll only check to see if the variable has been assigned a value.
+
+let myVariable = 'I Exist!';
+
+if (myVariable) {
+console.log(myVariable)
+} else {
+console.log('The variable does not exist.')
+}
+
+So which values are falsy— or evaluate to false when checked as a condition? The list of falsy values includes:
+
+0
+Empty strings like "" or ''
+null which represent when there is no value at all
+undefined which represent when a declared variable lacks a value
+NaN, or Not a Number
+Here’s an example with numbers:
+
+let numberOfApples = 0;
+
+if (numberOfApples){
+console.log('Let us eat apples!');
+} else {
+console.log('No apples left!');
+}
+
+// Prints 'No apples left!'
+
+The condition evaluates to false because the value of the numberOfApples is 0. Since 0 is a falsy value, the code block in the else statement will run.
+
+EG
+Say you have a website and want to take a user’s username to make a personalized greeting. Sometimes, the user does not have an account, making the username variable falsy. The code below checks if username is defined and assigns a default string if it is not:
+
+let username = '';
+let defaultName;
+
+if (username) {
+defaultName = username;
+} else {
+defaultName = 'Stranger';
+}
+
+console.log(defaultName); // Prints: Stranger
+
+If you combine your knowledge of logical operators you can use a short-hand for the code above. In a boolean condition, JavaScript assigns the truthy value to a variable if you use the || operator in your assignment:
+
+let username = '';
+let defaultName = username || 'Stranger';
+
+console.log(defaultName); // Prints: Stranger
+
+Because || or statements check the left-hand condition first, the variable defaultName will be assigned the actual value of username if it is truthy, and it will be assigned the value of 'Stranger' if username is falsy. This concept is also referred to as short-circuit evaluation.
+
+## Ternary Operator
+
+use a ternary operator to simplify an if...else statement.
+
+Take a look at the if...else statement example:
+
+let isNightTime = true;
+
+if (isNightTime) {
+console.log('Turn on the lights!');
+} else {
+console.log('Turn off the lights!');
+}
+
+We can use a ternary operator to perform the same functionality:
+
+isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+
+In the example above:
+
+The condition, isNightTime, is provided before the ?.
+Two expressions follow the ? and are separated by a colon :.
+If the condition evaluates to true, the first expression executes.
+If the condition evaluates to false, the second expression executes.
+
+let stopLight = 'yellow';
+
+if (stopLight === 'red') {
+console.log('Stop!');
+} else if (stopLight === 'yellow') {
+console.log('Slow down.');
+} else if (stopLight === 'green') {
+console.log('Go!');
+} else {
+console.log('Caution, unknown!');
+}
+
+The else if statements allow you to have multiple possible outcomes. if/else if/else statements are read from top to bottom, so the first condition that evaluates to true from the top to bottom is the block that gets executed.
+
+In the example above, since stopLight === 'red' evaluates to false and stopLight === 'yellow' evaluates to true, the code inside the first else if statement is executed. The rest of the conditions are not evaluated. If none of the conditions evaluated to true, then the code in the else statement would have executed.
+
+## MAGIC EIGHT BALL PROJ
+
+const userName = 'Jane'
+
+console.log('Hello!')
+
+const userQuestion = 'Do you like to study?'
+console.log( userName, userQuestion )
+
+let randomNumber = Math.floor(Math.random() \*3)
+if (randomNumber === 0) {
+console.log(eightBall)
+}
+if (randomNumber === 1) {
+console.log('decide')
+}
+if (randomNumber === 2) {
+console.log('hazy')
+}
+if (randomNumber === 3 ){
+console.log('predict')
+}
+
+let eightBall = 'BINGO'
+
+# FUNCTIONS
