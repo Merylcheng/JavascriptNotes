@@ -292,3 +292,42 @@ const rectHeight = 6
 calculateArea(rectWidth, rectHeight)
 
 The variables rectWidth and rectHeight are initialized with the values for the height and width of a rectangle before being used in the function call.
+
+## Default Parameters
+
+Default parameters allow parameters to have a predetermined value in case there is no argument passed into the function or if the argument is undefined when called.
+
+function greeting (name = 'stranger') {
+console.log(`Hello, ${name}!`)
+}
+
+greeting('Nick') // Output: Hello, Nick!
+greeting() // Output: Hello, stranger!
+
+## Return
+
+When a function is called, the computer will run through the function’s code and evaluate the result. By default, the resulting value is undefined.
+
+function rectangleArea(width, height) {
+let area = width \* height;
+}
+console.log(rectangleArea(5, 7)) // Prints undefined
+
+In the code example, we defined our function to calculate the area of a width and height parameter. Then rectangleArea() is invoked with the arguments 5 and 7. But when we went to print the results we got undefined. Did we write our function wrong? No! In fact, the function worked fine, and the computer did calculate the area as 35, but we didn’t capture it. So how can we do that? With the keyword return!
+
+function rectangleArea(width, height) {
+const area = width \* height;
+return area
+}
+
+To pass back information from the function call, we use a return statement. To create a return statement, we use the return keyword followed by the value that we wish to return. Like we saw above, if the value is omitted, undefined is returned instead.
+
+another example:
+function monitorCount(rows, columns) {
+return rows \* columns
+}
+
+const numOfMonitors = monitorCount (5, 4)
+console.log (numOfMonitors)
+
+ans: 20
